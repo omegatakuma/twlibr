@@ -13,16 +13,16 @@ Twitterライブラリ by Scheme
 
 ### ステータス取得 ###
 
-基本的なステータスを取得**(tweet数・follow数・follower数・fav数)**
+**基本的なステータスを取得**
 
 `status user cmd`
 
-+ `user`は**ユーザー名**
-+ `cmd`は**tweet数**・**follow数**・**follower数**・**fav数**
++ `user`はスクリーンネーム
++ `cmd`は`tweet``follow``follower``fav`のどれかを指定。
 
 ### フォロー一覧取得 ###
 
-フォロー一覧をリストで取得
+**フォロー一覧をリストで取得**
 
 `follow-get user`
 
@@ -30,7 +30,7 @@ Twitterライブラリ by Scheme
 
 ### フォロワー一覧取得 ###
 
-フォロワー一覧をリストで取得
+**フォロワー一覧をリストで取得**
 
 `follower-get user`
 
@@ -38,7 +38,7 @@ Twitterライブラリ by Scheme
 
 ### ツイート取得 ###
 
-ツイートn個をリストで取得
+**ツイートn個をリストで取得**
 
 `tweet-get user n`
 
@@ -47,7 +47,7 @@ Twitterライブラリ by Scheme
 
 ### ふぁぼ取得 ###
 ---------
-ふぁぼn個をリストで取得
+**ふぁぼn個をリストで取得**
 
 `fav-get user n`
 
