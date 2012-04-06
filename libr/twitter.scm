@@ -38,7 +38,7 @@
   (let1 result (receive (status head body)
 						(http-get uri (string-append "/1/friend/ids/"user".xml"))
 						(ssax:xml->sxml (open-input-string body) '()))
-		(map (lambda(x)(cadr x)) ((sxpath "/id_list/ids/id") result))))
+		(map (lambda(x)(user-get x)) (map (lambda(x)(cadr x)) ((sxpath "/id_list/ids/id") result)))))
 ;FollowerGET
 (define (follower-get user)
   (let1 result 
@@ -46,4 +46,5 @@
 				 (http-get uri
 						   (string-append "/1/followers/ids/" user ".xml"))
 				 (ssax:xml->sxml (open-input-string body) '()))
-		(map (lambda(x)(cadr x)) ((sxpath "/id_list/ids/id") result))))
+		(map (lambda(x)(user-get x)) (map (lambda(x)(cadr x)) ((sxpath "/id_list/ids/id") result)))))
+(provide "libr/twitter")
