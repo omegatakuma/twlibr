@@ -11,41 +11,41 @@ Twitterライブラリ by Scheme
 
 + `(use libr.twitter)`でuseできる。
 
-ステータスGET
--------------
+### ステータス取得 ###
+
 基本的なステータスを取得**(tweet数・follow数・follower数・fav数)**
 
-### `status user cmd` ###
+`status user cmd`
 + `user`は**ユーザー名**
 + `cmd`は**tweet数**・**follow数**・**follower数**・**fav数**
 
-フォローGET
-------------
+### フォロー一覧取得 ###
+
 フォロー一覧をリストで取得
 
-### `follow-get user` ###
+`follow-get user`
 + OAuth認証をしていないのでおそらくAPI制限にかかる。
 
-フォロワーGET
--------------
+### フォロワー一覧取得 ### 
+
 フォロワー一覧をリストで取得
 
-### `follower-get user` ###
+`follower-get user`
 + OAuth認証をしていないのでおそらくAPI制限にかかる。
 
-ツイートGET
------------
+### ツイート取得 ### 
+
 ツイートn個をリストで取得
 
-### `tweet-get user n` ###
+`tweet-get user n`
 + `user`はスクリーンネーム
 + `n`は取得する数
 
-ふぁぼGET
+### ふぁぼ取得 ###
 ---------
 ふぁぼn個をリストで取得
 
-### `fav-get user n` ###
+`fav-get user n`
 + `user`はスクリーンネーム
 + `n`は取得する数
 
