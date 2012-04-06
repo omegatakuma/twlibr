@@ -16,6 +16,7 @@ Twitterライブラリ by Scheme
 基本的なステータスを取得**(tweet数・follow数・follower数・fav数)**
 
 `status user cmd`
+
 + `user`は**ユーザー名**
 + `cmd`は**tweet数**・**follow数**・**follower数**・**fav数**
 
@@ -24,6 +25,7 @@ Twitterライブラリ by Scheme
 フォロー一覧をリストで取得
 
 `follow-get user`
+
 + OAuth認証をしていないのでおそらくAPI制限にかかる。
 
 ### フォロワー一覧取得 ### 
@@ -31,6 +33,7 @@ Twitterライブラリ by Scheme
 フォロワー一覧をリストで取得
 
 `follower-get user`
+
 + OAuth認証をしていないのでおそらくAPI制限にかかる。
 
 ### ツイート取得 ### 
@@ -38,6 +41,7 @@ Twitterライブラリ by Scheme
 ツイートn個をリストで取得
 
 `tweet-get user n`
+
 + `user`はスクリーンネーム
 + `n`は取得する数
 
@@ -46,6 +50,7 @@ Twitterライブラリ by Scheme
 ふぁぼn個をリストで取得
 
 `fav-get user n`
+
 + `user`はスクリーンネーム
 + `n`は取得する数
 
