@@ -2,7 +2,7 @@
 			   (use rfc.http)
 			   (use sxml.ssax)
 			   (use sxml.sxpath)
-			   (export ))
+			   (export status-get user-get tweet-get fav-get follow-user-get follower-user-get))
 (select-module libr.twitter)
 (define uri "api.twitter.com")
 ;StatusGET
@@ -10,7 +10,15 @@
   (let1 result (receive (status head body)
 						(http-get uri (string-append "/1/users/show.xml?screen_name="user))
 						(ssax:xml->sxml (open-input-string body) '()))
-		((sxpath (string-append "/user/"cmd"_count/text")) result)))
+		(cond 
+		  ((equal? cmd "tweet")((sxpath "/user/statuses_count/text()")result))
+		  ((equal? cmd "bio")((sxpath "/user/description/text()")result))		  
+		  ((equal? cmd "follow")((sxpath "/user/friends_count/text()")result))
+		  ((equal? cmd "follower")((sxpath "/user/followers_count/text()")result))
+		  ((equal? cmd "fav")((sxpath "/user/favourites_count/text()")result))
+		  ((equal? cmd "url")((sxpath "/user/url/text()")result))
+		  ((equal? cmd "timezone")((sxpath "/user/time_zone/text()")result))
+		  ((equal? cmd "bio")((sxpath "/user/description/text()")result))
 ;IDGET
 (define (user-get id)
   (let1 result (receive (status head body)

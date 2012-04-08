@@ -18,7 +18,7 @@ Twitterライブラリ by Scheme
 `status user cmd`
 
 + `user`はスクリーンネーム
-+ `cmd`は`tweet``follow``follower``fav`のどれかを指定。
++ `cmd`は`tweet``bio``local``url``list``timezone``follow``follower``fav`のどれかを指定。
 
 ### フォロー一覧取得 ###
 
@@ -46,7 +46,7 @@ Twitterライブラリ by Scheme
 + `n`は取得する数
 
 ### ふぁぼ取得 ###
----------
+
 **ふぁぼn個をリストで取得**
 
 `fav-get user n`
@@ -54,6 +54,12 @@ Twitterライブラリ by Scheme
 + `user`はスクリーンネーム
 + `n`は取得する数
 
+
+Version
+--------
+
+### Ver 1.1 ###
++ `bio``local``url``list``timezone`を追加
 
 ### Ver 1.0 ###
 + 動作するのかな((((；ﾟДﾟ))))ｶﾞｸｶﾞｸﾌﾞﾙﾌﾞﾙ
