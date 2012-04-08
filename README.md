@@ -54,9 +54,27 @@ Twitterライブラリ by Scheme
 + `user`はスクリーンネーム
 + `n`は取得する数
 
+### フォロー一覧取得(ID) ###
+
+**フォロー一覧をリストで取得(ID)**
+
+`follow-id-get user`
+
++ `user`はスクリーンネーム
+
+### フォロワー一覧取得(ID) ###
+
+**フォロワー一覧をリストで取得(ID)**
+
+`follower-id-get user`
+
++ `user`はスクリーンネーム
 
 Version
 --------
+
+### Ver 1.2 ###
++ `follow-id-get`と`follower-id-get`を追加
 
 ### Ver 1.1 ###
 + `bio``local``url``list``timezone`を追加
