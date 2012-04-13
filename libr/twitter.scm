@@ -39,7 +39,7 @@
 (define (fav-get user n)
   (let1 result (receive (status head body)
 						(http-get uri
-								  (string-append "/1/favorites/"user".xml?pages="n))
+								  (string-append "/1/favorites/"user".xml?page="n))
 						(ssax:xml->sxml (open-input-string body) '()))
 		(map (lambda(x)x) ((sxpath "/statuses/status/text/text()") result))))
 
